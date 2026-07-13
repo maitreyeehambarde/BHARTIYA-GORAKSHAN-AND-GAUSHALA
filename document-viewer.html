@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Viewer - BHARTIYA GORAKSHAN AND GAUSHALA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;700&family=Noto+Sans+Devanagari:wght@400;600;700;800&family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="nav-wrap">
+      <a class="logo" href="index.html" aria-label="BHARTIYA GORAKSHAN AND GAUSHALA home">
+        <img src="https://i0.wp.com/dakshinvrindavan.org/wp-content/uploads/2021/02/cropped-site-Icon.png?fit=180%2C180&ssl=1" alt="BHARTIYA GORAKSHAN AND GAUSHALA logo">
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="reports.html">Reports & Certificates</a>
+        <a href="reports.html#gallery">Gallery</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="document-viewer-page">
+    <section class="container document-viewer-shell">
+      <div class="document-viewer-header">
+        <div>
+          <p class="small-title">Document</p>
+          <h1 id="documentTitle">Document Viewer</h1>
+          <p id="documentDescription">The selected document will open below.</p>
+        </div>
+        <a class="button" id="downloadLink" href="#" download>Download</a>
+      </div>
+      <div id="documentFrame" class="document-frame"></div>
+    </section>
+  </main>
+
+  <script>
+    const documents = {
+      goseva: {
+        title: "Maharashtra Goseva Ayog Registration Certificate",
+        description: "Registration certificate issued by Maharashtra Goseva Ayog for the gaushala.",
+        file: "assets/documents/maharashtra-goseva-ayog-registration.jpeg",
+        type: "image"
+      },
+      dharmadaya: {
+        title: "Dharmadaya Ayukta Certificate",
+        description: "Charitable registration certificate issued through the Dharmadaya Ayukta / Public Trust Registration office.",
+        file: "dharmadaya-ayukta-certificate.jpeg",
+        type: "image"
+      },
+      audit: {
+        title: "Audit Report 2024-25",
+        description: "Financial audit report for the organization.",
+        file: "assets/documents/audit-report-2024-25.pdf",
+        type: "pdf"
+      }
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const selected = documents[params.get("doc")] || documents.goseva;
+    document.title = selected.title + " - BHARTIYA GORAKSHAN AND GAUSHALA";
+    document.getElementById("documentTitle").textContent = selected.title;
+    document.getElementById("documentDescription").textContent = selected.description;
+    document.getElementById("downloadLink").href = selected.file;
+
+    const frame = document.getElementById("documentFrame");
+    if (selected.type === "pdf") {
+      frame.innerHTML = `<iframe src="${selected.file}" title="${selected.title}"></iframe>`;
+    } else {
+      frame.innerHTML = `<img src="${selected.file}" alt="${selected.title}">`;
+    }
+  </script>
+</body>
+</html>
+

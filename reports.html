@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reports & Certificates - BHARTIYA GORAKSHAN AND GAUSHALA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;700&family=Noto+Sans+Devanagari:wght@400;600;700;800&family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="nav-wrap">
+      <a class="logo" href="index.html" aria-label="BHARTIYA GORAKSHAN AND GAUSHALA home">
+        <img src="https://i0.wp.com/dakshinvrindavan.org/wp-content/uploads/2021/02/cropped-site-Icon.png?fit=180%2C180&ssl=1" alt="BHARTIYA GORAKSHAN AND GAUSHALA logo">
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html" data-i18n="navHome">Home</a>
+        <a href="index.html#about" data-i18n="navAbout">About us</a>
+        <a href="help.html" data-i18n="navHelp">Help Us</a>
+        <a href="index.html#donate" data-i18n="navDonate">Donate</a>
+        <a href="index.html#membership" data-i18n="navMembership">Experience Gau Seva</a>
+        <a href="reports.html" data-i18n="navReports">Reports & Certificates</a>
+        <a href="#gallery" data-i18n="navGallery">Gallery</a>
+        <a href="index.html#contact" data-i18n="navContact">Contact Us</a>
+        <select id="languageSelect" class="language-select" aria-label="Choose language">
+          <option value="en">English</option>
+          <option value="mr">Marathi</option>
+        </select>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="reports-hero">
+      <div class="container center">
+        <p class="small-title" data-i18n="reportsKicker">Transparency</p>
+        <h1 data-i18n="reportsTitle">Reports & Certificates</h1>
+        <p data-i18n="reportsLead">View registration certificates, compliance documents, and audit reports related to the organization.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container documents-grid">
+        <article class="document-card">
+          <h2 data-i18n="gosevaCertTitle">Maharashtra Goseva Ayog Registration Certificate</h2>
+          <p data-i18n="gosevaCertText">This certificate shows the organization registration details under the Maharashtra Goseva Ayog, including the gaushala name, address, registration number, and validity period.</p>
+          <div class="document-actions">
+            <a class="button" href="document-viewer.html?doc=goseva" target="_blank" data-i18n="viewDocument">View Document</a>
+            <a class="button secondary-doc-button" href="assets/documents/maharashtra-goseva-ayog-registration.jpeg" download data-i18n="downloadDocument">Download</a>
+          </div>
+        </article>
+
+        <article class="document-card">
+          <h2 data-i18n="dharmadayaTitle">Dharmadaya Ayukta Certificate</h2>
+          <p data-i18n="dharmadayaText">This certificate is the charitable registration document issued through the Dharmadaya Ayukta / Public Trust Registration office. It supports the trust's official registration record.</p>
+          <div class="document-actions">
+            <a class="button" href="document-viewer.html?doc=dharmadaya" target="_blank" data-i18n="viewDocument">View Document</a>
+            <a class="button secondary-doc-button" href="dharmadaya-ayukta-certificate.jpeg" download data-i18n="downloadDocument">Download</a>
+          </div>
+        </article>
+
+        <article class="document-card">
+          <h2 data-i18n="auditTitle">Audit Report 2024-25</h2>
+          <p data-i18n="auditText">The audit report provides financial records and review information for the organization. It helps supporters understand how funds are documented and maintained.</p>
+          <div class="document-actions">
+            <a class="button" href="document-viewer.html?doc=audit" target="_blank" data-i18n="viewPdf">View PDF</a>
+            <a class="button secondary-doc-button" href="assets/documents/audit-report-2024-25.pdf" download data-i18n="downloadDocument">Download</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section gallery-section" id="gallery">
+      <div class="container center">
+        <p class="small-title" data-i18n="galleryKicker">Photos</p>
+        <h2 data-i18n="galleryTitle">Gallery</h2>
+        <p class="section-lead compact-lead" data-i18n="galleryLead">A place for visitors to view photos from the gaushala, cow care activities, rescue work, and community seva.</p>
+      </div>
+      <div class="container gallery-grid">
+        <img src="assets/feature-1.jpeg" alt="Gaushala photo 1">
+        <img src="assets/feature-2.jpeg" alt="Gaushala photo 2">
+        <img src="assets/feature-3.jpeg" alt="Gaushala photo 3">
+        <img src="assets/donation-details.jpeg" alt="Gaushala support details">
+        <img src="assets/gallery-1.png" alt="Caretakers with cows inside the gaushala">
+        <img src="assets/gallery-2.png" alt="Gaushala caretakers standing with a cow">
+        <img src="assets/gallery-3.jpeg" alt="Cow and calf inside the gaushala">
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="socials">
+        <a href="https://www.facebook.com/share/1EiMH8xy7c/" target="_blank">Facebook</a>
+        <a href="https://twitter.com/daksinvrindavan" target="_blank">X</a>
+        <a href="https://www.instagram.com/dakshinvrindavan/" target="_blank">Instagram</a>
+        <a href="https://www.youtube.com/channel/UCX0RAwD0zaaq_ASyrpGauJA" target="_blank">YouTube</a>
+      </div>
+      <p data-i18n="footerText">2026. BHARTIYA GORAKSHAN AND GAUSHALA. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
