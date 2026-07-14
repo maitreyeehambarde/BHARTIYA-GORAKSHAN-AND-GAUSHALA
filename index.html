@@ -10,43 +10,27 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header class="topbar">
  <header class="topbar">
     <div class="nav-wrap">
+      <a class="logo" href="#home" aria-label="BHARTIYA GORAKSHAN AND GAUSHALA home">
+        <img src="https://i0.wp.com/dakshinvrindavan.org/wp-content/uploads/2021/02/cropped-site-Icon.png?fit=180%2C180&ssl=1" alt="BHARTIYA GORAKSHAN AND GAUSHALA logo">
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#home" data-i18n="navHome">Home</a>
+        <a href="#about" data-i18n="navAbout">About us</a>
+        <a href="help.html" data-i18n="navHelp">Help Us</a>
+        <a href="#donate" data-i18n="navDonate">Donate</a>
+        <a href="#membership" data-i18n="navMembership">Experience Gau Seva</a>
+        <a href="reports.html" data-i18n="navReports">Reports & Certificates</a>
+        <a href="reports.html#gallery" data-i18n="navGallery">Gallery</a>
+        <a href="#contact" data-i18n="navContact">Contact Us</a>
+        <select id="languageSelect" class="language-select" aria-label="Choose language">
+          <option value="en">English</option>
+          <option value="mr">Marathi</option>
+        </select>
+      </nav>
 
-        <a class="logo" href="#home">
-            <img src="https://i0.wp.com/dakshinvrindavan.org/wp-content/uploads/2021/02/cropped-site-Icon.png?fit=180%2C180&ssl=1">
-        </a>
-
-        <button class="menu-toggle" id="menuToggle">
-            ☰
-        </button>
-
-        <div class="menu-overlay" id="menuOverlay"></div>
-
-        <nav class="main-nav" id="mainNav">
-
-            <button class="close-menu" id="closeMenu">
-                ✕
-            </button>
-
-            <a href="#home" data-i18n="navHome">Home</a>
-            <a href="#about" data-i18n="navAbout">About us</a>
-            <a href="help.html" data-i18n="navHelp">Help Us</a>
-            <a href="#donate" data-i18n="navDonate">Donate</a>
-            <a href="#membership" data-i18n="navMembership">Experience Gau Seva</a>
-            <a href="reports.html" data-i18n="navReports">Reports & Certificates</a>
-            <a href="reports.html#gallery" data-i18n="navGallery">Gallery</a>
-            <a href="#contact" data-i18n="navContact">Contact Us</a>
-
-            <select id="languageSelect" class="language-select">
-                <option value="en">English</option>
-                <option value="mr">Marathi</option>
-            </select>
-
-        </nav>
-
-    </div>
-</header>
 
   <main>
     <section class="hero" id="home">
