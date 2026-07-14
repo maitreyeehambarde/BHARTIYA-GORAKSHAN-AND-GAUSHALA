@@ -891,12 +891,20 @@ button {
         flex-direction: column;
     }
 
-    .main-nav {
-        width: 100%;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        gap: 14px;
-    }
+  .main-nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 14px;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+.main-nav a {
+    flex: 0 0 auto;
+}
 
     .language-select {
         min-width: 150px;
