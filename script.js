@@ -270,37 +270,3 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
-const menu=document.getElementById("mainNav");
-const open=document.getElementById("menuToggle");
-const close=document.getElementById("closeMenu");
-const overlay=document.getElementById("menuOverlay");
-
-function closeMenu(){
-
-menu.classList.remove("active");
-
-overlay.classList.remove("show");
-
-document.body.classList.remove("menu-open");
-
-}
-
-open.onclick=function(){
-
-menu.classList.add("active");
-
-overlay.classList.add("show");
-
-document.body.classList.add("menu-open");
-
-};
-
-close.onclick=closeMenu;
-
-overlay.onclick=closeMenu;
-
-document.querySelectorAll(".main-nav a").forEach(item=>{
-
-item.onclick=closeMenu;
-
-});
